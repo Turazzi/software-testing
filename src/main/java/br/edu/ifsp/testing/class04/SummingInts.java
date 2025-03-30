@@ -37,6 +37,10 @@ public class SummingInts {
             // If the sum is greater than 10, carries the rest of the division to the next digit
             carry = sum / 10;
         }
+
+        //Fix for the bug of not increasing a decimal place when the sum requires it
+        if(carry > 0 ) result.addFirst(carry);
+
         return result;
     }
 }
