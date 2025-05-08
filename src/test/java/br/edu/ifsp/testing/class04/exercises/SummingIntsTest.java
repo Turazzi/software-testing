@@ -1,10 +1,9 @@
-package br.edu.ifsp.testing.class04;
+package br.edu.ifsp.testing.class04.exercises;
 
+import br.edu.ifsp.testing.class04.SummingInts;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.NullSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
 import java.util.List;
