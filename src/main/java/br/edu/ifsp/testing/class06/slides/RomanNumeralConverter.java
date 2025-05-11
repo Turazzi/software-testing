@@ -10,16 +10,19 @@ public class RomanNumeralConverter {
 
     public int convert(String numberInRoman) {
         int finalNumber = 0;
-        int lastNeighbor = 0;
+        int lastNeighbor = 0;  //A
+        //          a                            b       g
         for(int i = numberInRoman.length() - 1; i >= 0; i--) {
-            int current = table.get(numberInRoman.charAt(i));
+            int current = table.get(numberInRoman.charAt(i)); //c
 
-            int multiplier = 1;
+            int multiplier = 1;  //c
+                    //d                     e
             if(current < lastNeighbor) multiplier = -1;
 
-            finalNumber += current * multiplier;
+            finalNumber += current * multiplier; // f
             lastNeighbor = current;
         }
+        // h
         return finalNumber;
     }
 }
