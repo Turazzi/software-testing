@@ -55,4 +55,32 @@ class TriangleUtilsTest {
 
     }
 
+    @Nested
+    @DisplayName("Testes válidos")
+    class Validos {
+
+        @Test
+        @DisplayName("NonTriangle com dois pontos na mesma coordenada")
+        void nonTriangleComDoisPontosNaMesmaCoordenada() {
+
+            double[][] data =  new double[][]{{0,0,0,0,1,2}};
+
+            assertThat(triangleUtils.computeTypeStatistics(data).nonTriangle()).isEqualTo(1);
+
+        }
+
+        @Test
+        @DisplayName("NonTriangle com pontos em uma linha reta")
+        void nonTriangleComPontosEmUmaLinhaReta() {
+
+            double[][] data =  new double[][]{{0,0,1,1,2,2}};
+
+            assertThat(triangleUtils.computeTypeStatistics(data).nonTriangle()).isEqualTo(1);
+
+        }
+
+
+
+    }
+
 }
